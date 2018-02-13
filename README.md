@@ -1,4 +1,5 @@
 # Laravel Commonmark
+[![Build Status](https://travis-ci.org/Harrk/laravel-commonmark.svg?branch=master)](https://travis-ci.org/Harrk/laravel-commonmark)
 
 Laravel Commonmark is a wrapper for [league/commonmark](https://github.com/thephpleague/commonmark)
 which allows for the parsing of regular Markdown as well as CommonMark.
