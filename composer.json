@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "require": {
         "league/commonmark": "^0.17.0",
-        "illuminate/view": "^5.6"
+        "illuminate/view": "5.6.*"
     },
     "autoload": {
         "psr-4": {
