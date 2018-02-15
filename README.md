@@ -14,7 +14,7 @@ I figured I could take a crack at it.
 This also seemed like a good opportunity to gain some experience with open-source projects.
 
 ## Installation
-This package can only be installed with Laravel 5.6.
+This package supports Laravel 5.5 and 5.6.
 
 ```bash
 $ composer require harrk/laravel-commonmark
