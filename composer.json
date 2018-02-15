@@ -2,7 +2,7 @@
     "name": "harrk/laravel-commonmark",
     "description": "Compile laravel blade templates and strings into markdown",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "require": {
         "league/commonmark": "^0.17.0",
         "illuminate/view": "5.6.*"
