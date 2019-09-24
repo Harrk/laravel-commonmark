@@ -45,7 +45,7 @@ Or if you prefer using helper functions instead:
 class MyClass {
 
     public function myFunction() {
-        return markdownToHtml('# H1 Header');
+        return markdown_to_html('# H1 Header');
     }
     
 }

@@ -29,6 +29,13 @@ class MarkdownCompilerTest extends TestCase {
         $this->assertEquals($md->convertToHtml($markdown_text), $expected_html_text);
     }
 
+    public function testCanParseMarkdownHelper(): void {
+        $markdown_text = '**Hello** World, _this_ is `some` markdown.';
+        $expected_html_text = "<p><strong>Hello</strong> World, <em>this</em> is <code>some</code> markdown.</p>\n";
+
+        $this->assertEquals(markdown_to_html($markdown_text), $expected_html_text);
+    }
+
     public function testMarkdownEngine(): void {
         $engine = new MarkdownEngine();
 
