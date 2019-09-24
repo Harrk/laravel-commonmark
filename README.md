@@ -14,7 +14,7 @@ I figured I could take a crack at it.
 This also seemed like a good opportunity to gain some experience with open-source projects.
 
 ## Installation
-This package supports Laravel 5.5 and 5.6.
+This package has been updated to work with Laravel 6.0, just install via composer:
 
 ```bash
 $ composer require harrk/laravel-commonmark
@@ -45,7 +45,7 @@ Or if you prefer using helper functions instead:
 class MyClass {
 
     public function myFunction() {
-        return markdown('# H1 Header');
+        return markdownToHtml('# H1 Header');
     }
     
 }

@@ -1,16 +1,21 @@
 <?php
 /**
- * @author Harrk <https://harrkus.com>
+ * @author Harrk <https://harrk.dev>
  */
 
-if (!function_exists('markdown')){
+use Illuminate\Contracts\Container\BindingResolutionException;
+use League\CommonMark\CommonMarkConverter;
+
+if (!function_exists('markdownToHtml')){
     /**
      * Helper function for parsing markdown
      * @param string $string
      * @return string
+     * @throws BindingResolutionException
      */
-    function markdown($string){
-        $md = app()->make(\League\CommonMark\CommonMarkConverter::class);
+    function markdownToHtml($string): string {
+        $md = resolve(CommonMarkConverter::class);
+
         return $md->convertToHtml($string);
     }
 }

@@ -1,21 +1,25 @@
 <?php
 /**
- * @author Harrk <https://harrkus.com>
+ * @author Harrk <https://harrk.dev>
  */
 
 namespace Harrk\CommonMark\Engines;
 
 
 use Illuminate\Contracts\View\Engine;
+use League\CommonMark\CommonMarkConverter;
 
 class MarkdownEngine implements Engine {
 
     /**
      * @inheritdoc
      */
-    public function get($path, array $data = []) {
+    public function get($path, array $data = []): string {
         $fs = file_get_contents($path);
-        return markdown($fs);
+
+        $markdownParser = resolve(CommonMarkConverter::class);
+
+        return $markdownParser->convertToHtml($fs);
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * @author Harrk <https://harrkus.com>
+ * @author Harrk <https://harrk.dev>
  * @created 12/02/2018
  */
 
@@ -12,14 +12,14 @@ use League\CommonMark\CommonMarkConverter;
 
 class MarkdownCompilerTest extends TestCase {
 
-    public function testConcreteRegistration() {
+    public function testConcreteRegistration(): void {
         $app = $this->app;
         $md = $app->make(CommonMarkConverter::class);
 
         $this->assertEquals(get_class($md), CommonMarkConverter::class);
     }
 
-    public function testCanParseMarkdown() {
+    public function testCanParseMarkdown(): void {
         $app = $this->app;
         $md = $app->make(CommonMarkConverter::class);
 
@@ -29,7 +29,7 @@ class MarkdownCompilerTest extends TestCase {
         $this->assertEquals($md->convertToHtml($markdown_text), $expected_html_text);
     }
 
-    public function testMarkdownEngine() {
+    public function testMarkdownEngine(): void {
         $engine = new MarkdownEngine();
 
         $expected_html_text = "<p><strong>Hello</strong> World, <em>this</em> is <code>some</code> markdown.</p>\n";

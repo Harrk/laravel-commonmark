@@ -1,6 +1,6 @@
 <?php
 /**
- * @author Harrk <https://harrkus.com>
+ * @author Harrk <https://harrk.dev>
  */
 
 namespace Harrk\CommonMark;
@@ -14,24 +14,25 @@ class CommonMarkServiceProvider extends ServiceProvider {
     /**
      * Boot Service Provider
      */
-    public function boot() {
+    public function boot(): void {
         $this->bootMarkdownCompiler();
     }
 
     /**
      * Register concretes
      */
-    public function register() {
+    public function register(): void {
         $this->registerMarkdownCompiler();
     }
 
     /**
      * Boot the markdown compiler
      */
-    public function bootMarkdownCompiler() {
+    public function bootMarkdownCompiler(): void {
         $app = $this->app;
 
         $resolver = $app->make('view.engine.resolver');
+
         $app->view->addExtension('md.blade.php', 'md');
 
         $resolver->register('md', function(){
@@ -42,7 +43,7 @@ class CommonMarkServiceProvider extends ServiceProvider {
     /**
      * Register markdown compiler as a singleton
      */
-    public function registerMarkdownCompiler() {
+    public function registerMarkdownCompiler(): void {
         app()->singleton(CommonMarkConverter::class, function(){
             return new CommonMarkConverter;
         });
