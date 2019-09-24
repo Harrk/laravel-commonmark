@@ -17,7 +17,7 @@ This also seemed like a good opportunity to gain some experience with open-sourc
 This package has been updated to work with Laravel 6.0, just install via composer:
 
 ```bash
-$ composer require harrk/laravel-commonmark
+$ composer require "harrk/laravel-commonmark=~v2.0"
 ```
 
 ## Usage
